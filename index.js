@@ -13,11 +13,11 @@ btn_fondo.addEventListener('click', function onClick(event) {
 
 
 btn_letra.addEventListener('click', function onClick(event) {
-    const backgroundColor = document.getElementById('letrero').style.color;
+    const backgroundColor = document.getElementById('letrero').style.css;
     if(backgroundColor==="green"){
-        document.getElementById('letrero').style.color = 'blue'
+        document.getElementById('letrero').style.color = 'font1'
     }else{
-        document.getElementById('letrero').style.color = 'green'
+        document.getElementById('letrero').style.color = 'font2'
     }
 });
 
