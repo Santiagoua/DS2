@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+const btn_fondo = document.getElementById('button-color');
+const btn_letra = document.getElementById('button-color-letra');
+const vlan = document.getElementById('vlan');
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+btn_fondo.addEventListener('click', function onClick(event) {
+    const backgroundColor = document.body.style.backgroundColor;
+    if(backgroundColor==="white"){
+        document.body.style.backgroundColor = 'black'
+    }else{
+        document.body.style.backgroundColor = 'white'
+    }
+  });
 
-export default App;
+
+btn_letra.addEventListener('click', function onClick(event) {
+    const backgroundColor = document.getElementById('letrero').style.color;
+    if(backgroundColor==="green"){
+        document.getElementById('letrero').style.color = 'blue'
+    }else{
+        document.getElementById('letrero').style.color = 'green'
+    }
+});
+
+vlan.addEventListener('click', function onClick(event) {
+    const status= document.getElementById("vlan-txt").style.display;
+    if(status==="none"){
+        document.getElementById("vlan-txt").style.display="block"
+    }else{
+        document.getElementById("vlan-txt").style.display="none"
+    }
+    
+});
