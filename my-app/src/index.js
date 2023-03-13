@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const btn_fondo = document.getElementById('button-color');
+const btn_letra = document.getElementById('button-color-letra');
+const vlan = document.getElementById('vlan');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+btn_fondo.addEventListener('click', function onClick(event) {
+    const backgroundColor = document.body.style.backgroundColor;
+    if(backgroundColor==="white"){
+        document.body.style.backgroundColor = 'black'
+    }else{
+        document.body.style.backgroundColor = 'white'
+    }
+  });
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+btn_letra.addEventListener('click', function onClick(event) {
+    const backgroundColor = document.getElementById('letrero').style.color;
+    if(backgroundColor==="green"){
+        document.getElementById('letrero').style.color = 'blue'
+    }else{
+        document.getElementById('letrero').style.color = 'green'
+    }
+});
+
+vlan.addEventListener('click', function onClick(event) {
+    const status= document.getElementById("vlan-txt").style.display;
+    if(status==="none"){
+        document.getElementById("vlan-txt").style.display="block"
+    }else{
+        document.getElementById("vlan-txt").style.display="none"
+    }
+    
+});
