@@ -1,28 +1,19 @@
 .bienvenido_letrero{
-    color: green;
-}
-#button-color{
-    background-color: #4CAF50; /* Green */
-    border: 1px solid green;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-  #button-color-letra{
-    background-color: #4CAF50; /* Green */
-    border: 1px solid green;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+    import React from 'react';
+    import './styles.css';
+    
+    function App() {
+      return (
+        <div>
+          <p className="font1">Este texto usa el primer tipo de letra.</p>
+          <p className="font2">Este texto usa el segundo tipo de letra.</p>
+          <p className="font3">Este texto usa el tercer tipo de letra.</p>
+        </div>
+      );
+    }
+    
+    export default App;
+    
 }
 
 #vlan-txt{
