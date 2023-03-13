@@ -30,45 +30,5 @@ vlan.addEventListener('click', function onClick(event) {
     }
     const express = require('express');
 const app = express();
-
-
-// Ruta para la página principal
-app.get('/', (req, res) => {
-  res.send(`
-    <html>
-      <head>
-        <title>Inicio de sesión</title>
-      </head>
-      <body>
-        <h1>Iniciar sesión</h1>
-        <form action="/login" method="POST">
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email">
-          <br><br>
-          <label for="password">Contraseña:</label>
-          <input type="password" name="password" id="password">
-          <br><br>
-          <button type="submit">Iniciar sesión</button>
-        </form>
-      </body>
-    </html>
-  `);
-});
-
-
-// Ruta para la página de bienvenida
-app.get('/welcome', (req, res) => {
-  res.send(`
-    <html>
-      <head>
-        <title>Bienvenido</title>
-      </head>
-      <body>
-        <h1>Bienvenido</h1>
-        <p>Has iniciado sesión exitosamente</p>
-      </body>
-    </html>
-  `);
-}); 
     
 });
